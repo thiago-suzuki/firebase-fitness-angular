@@ -121,8 +121,8 @@
     top: 0;
     right: 0;
     transform: translate(50%, -50%);
-    font-size: 10px; /* Equivalente a text-xs */
-    color: #07f5fd; /* Equivalente a text-green-500 */
+    font-size: 10px;
+    color: #91EFD4;
   }
 }
 
@@ -260,7 +260,7 @@
   }
   
   .cards-content::-webkit-scrollbar {
-    display: none; /* Esconde a barra de rolagem no Chrome/Safari */
+    display: none;
   }
   
   .cards-content > div {
