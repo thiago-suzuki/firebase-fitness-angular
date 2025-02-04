@@ -22,7 +22,7 @@ Aplicação de Academia para Prática de Exercícios com Programas, Personal e C
 - Pacote de Gerenciamento de Dependências: NPM
 - Framework: Angular + Ionic
 - Deploy: Vercel
-- Link Deploy:
+- Link Deploy: https://fitness-app-phi-eight.vercel.app/home
 
 <br>
 
