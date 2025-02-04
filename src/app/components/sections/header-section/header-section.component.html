@@ -1,0 +1,18 @@
+<header class="header-content">
+  <div class="toolbar">
+    <button class="menu" (click)="alertNotifications('Esse é o menu')">
+      <ion-icon name="menu-outline"></ion-icon>
+    </button>
+    <img
+      src="assets/fitness.jpg"
+      alt="Fitness"
+      class="logo"
+    />
+    <button class="notification-icon" (click)="alertNotifications('Há notificações não lidas')">
+      <ion-icon name="notifications-circle" class="main-icon"></ion-icon>
+      <ion-icon name="ellipse" class="badge-icon"></ion-icon>
+    </button>  
+  </div>
+
+  <PerfilContent style="width: 100%;"/>
+</header>

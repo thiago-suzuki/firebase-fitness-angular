@@ -1,0 +1,24 @@
+<section class="program-list-content">
+  <div class="title-content">
+    <h3>
+      PROGRAMAS&ensp;<span class="new">NOVO</span>
+    </h3>
+  </div>
+
+  <br>
+
+  <div class="cards-content">
+    <div class="card" *ngFor="let p of programs">
+      <img
+        src="assets/homem-tres.jpg"
+        alt=""
+        class="background-image"
+      />
+      <div class="card-title-with-header">
+        <p *ngIf="p.is_training">Continuar Treinando</p>
+        <h4>{{ p.name }}</h4>
+      </div>
+      <div class="effect"></div>
+    </div>
+  </div>
+</section>

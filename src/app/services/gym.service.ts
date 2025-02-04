@@ -1,6 +1,9 @@
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { Injectable } from "@angular/core";
 import { Observable } from 'rxjs';
+import { PersonalDTO } from '../models/personal.model';
+import { ProgramDTO } from '../models/program.model';
+
 
 @Injectable({
   providedIn: 'root',
@@ -8,14 +11,14 @@ import { Observable } from 'rxjs';
 export class GymService {
   constructor(private firestore: Firestore) {}
 
-  getAllPersonals(): Observable<any[]> {
+  getAllPersonals(): Observable<PersonalDTO[]> {
     const personalsCollection = collection(this.firestore, 'Personals');
-    return collectionData(personalsCollection);
+    return collectionData(personalsCollection, { idField: 'id' }) as Observable<PersonalDTO[]>;
   }
 
-  getAllPrograms(): Observable<any[]> {
+  getAllPrograms(): Observable<ProgramDTO[]> {
     const programsCollection = collection(this.firestore, 'Programs');
-    return collectionData(programsCollection);
+    return collectionData(programsCollection, { idField: 'id' }) as Observable<ProgramDTO[]>;
   }
 }
 

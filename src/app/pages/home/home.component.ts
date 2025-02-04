@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { PersonalDTO } from 'src/app/models/personal.model';
+import { ProgramDTO } from 'src/app/models/program.model';
 import { GymService } from 'src/app/services/gym.service';
 
 @Component({
@@ -9,8 +11,8 @@ import { GymService } from 'src/app/services/gym.service';
   standalone: false
 })
 export class HomeComponent  implements OnInit {
-  personals: any[] = []
-  programs: any[] = []
+  personals: PersonalDTO[] = []
+  programs: ProgramDTO[] = []
   loading: boolean = false;
 
   constructor(
