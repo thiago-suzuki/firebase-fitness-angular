@@ -1,0 +1,8 @@
+{
+  "name": "firebase-fitness-angular",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "79ae0b82"
+}

@@ -1,0 +1,117 @@
+<ion-content id="webcrumbs">
+  <div class="container">
+    <header class="header-content">
+      <div class="toolbar">
+        <button class="menu" (click)="alertNotifications('Esse é o menu')">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+        <img
+          src="assets/fitness.jpg"
+          alt="Fitness"
+          class="logo"
+        />
+        <button class="notification-icon" (click)="alertNotifications('Há notificações não lidas')">
+          <span class="material-symbols-outlined main-icon">notifications</span>
+          <span class="material-symbols-outlined badge-icon">fiber_manual_record</span>
+        </button>  
+      </div>
+
+      <div class="perfil-content">
+        <div class="name">
+          <img
+            src="https://github.com/thiago-suzuki.png"
+            alt=""
+            class="avatar"
+          />
+          <div class="details-name">
+            <h2>Thiago Suzuki</h2>
+            <p>Nível Roxo</p>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="button-objective">
+            <ion-icon name="person-outline" style="color: #f97316"></ion-icon>&ensp;MEU CORPO
+          </button>
+          <button class="button-objective">
+            <ion-icon name="trophy-outline" style="color: #f97316"></ion-icon>&ensp;OBJETIVOS E CONQUISTAS
+          </button>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="videos-content">
+      <div class="title-content">
+        <h3>
+          PERSONAL ONLINE&ensp;<ion-icon name="add-circle-outline" style="color: #f97316; font-size: 24px;"></ion-icon>
+        </h3>
+      </div>
+
+      <br>
+
+      <div class="cards-content">
+        <div class="card" style="opacity: 1;">
+          <img
+            src="assets/homem-dois.jpg"
+            alt=""
+            class="background-image"
+          />
+          <div class="card-title-center">
+            <h4>
+              <ion-icon name="add-circle-outline" style="font-size: 24px;"></ion-icon>&ensp;NOVO TREINO
+            </h4>
+          </div>
+        </div>
+        <div class="card" *ngFor="let p of personals">
+          <img
+            src="assets/homem.jpg"
+            alt=""
+            class="background-image"
+          />
+          <div class="card-title">
+            <h4 style="font-weight: 700;">{{ p.name }}</h4>
+          </div>
+          <div class="effect"></div>
+        </div>
+      </div>
+    </section>
+
+    <br>
+    
+    <section class="videos-content">
+      <div class="title-content">
+        <h3>
+          PROGRAMAS&ensp;<span class="new">NOVO</span>
+        </h3>
+      </div>
+
+      <br>
+
+      <div class="cards-content">
+        <div class="card" *ngFor="let p of programs">
+          <img
+            src="assets/homem-tres.jpg"
+            alt=""
+            class="background-image"
+          />
+          <div class="card-title-with-header">
+            <p *ngIf="p.is_training">Continuar Treinando</p>
+            <h4>{{ p.name }}</h4>
+          </div>
+          <div class="effect"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="more-contents">
+      <h3>CONTEÚDOS</h3>
+      <div class="area-squares">
+        <div class="big-square">
+          <div class="orange-square"></div>
+        </div>
+        <div class="big-square"></div>
+      </div>
+    </section>
+
+  </div>
+</ion-content>
